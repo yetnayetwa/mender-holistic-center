@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mender Holistic Center | Rooted in Compassion & Science</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?v=2">
     <style>
         :root {
             --sage-green: #9CAF88;
@@ -41,6 +44,7 @@
             font-weight: 400;
         }
 
+        /* Language Toggle */
         .lang-toggle {
             position: fixed;
             top: 20px;
@@ -75,6 +79,7 @@
             background: var(--warm-sand);
         }
 
+        /* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -160,6 +165,7 @@
             color: var(--sage-green);
         }
 
+        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -272,6 +278,7 @@
             color: white;
         }
 
+        /* Services Section */
         .services {
             padding: 100px 5%;
             background: var(--warm-white);
@@ -304,7 +311,7 @@
 
         .service-card {
             background: var(--cream);
-            padding: 0 0 40px 0;
+            padding: 40px 30px;
             border-radius: 20px;
             text-align: center;
             transition: all 0.4s ease;
@@ -331,14 +338,6 @@
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-        }
-
-        .service-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 15px 15px 0 0;
-            margin-bottom: 20px;
         }
 
         .service-icon {
@@ -370,7 +369,6 @@
             color: var(--charcoal);
             font-size: 0.95rem;
             line-height: 1.7;
-            padding: 0 30px;
         }
 
         .service-tag {
@@ -384,6 +382,7 @@
             font-weight: 500;
         }
 
+        /* About Section */
         .about {
             padding: 100px 5%;
             background: linear-gradient(135deg, var(--cream) 0%, var(--warm-sand) 100%);
@@ -439,6 +438,7 @@
             font-size: 1.2rem;
         }
 
+        /* How It Works */
         .how-it-works {
             padding: 100px 5%;
             background: var(--warm-white);
@@ -487,6 +487,7 @@
             font-size: 0.95rem;
         }
 
+        /* Booking Section */
         .booking {
             padding: 100px 5%;
             background: var(--cream);
@@ -537,6 +538,45 @@
             gap: 20px;
         }
 
+        /* Payment Section */
+        .payment-section {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid var(--warm-sand);
+        }
+
+        .payment-options {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .payment-option {
+            flex: 1;
+            min-width: 150px;
+            padding: 20px;
+            border: 2px solid var(--warm-sand);
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .payment-option:hover,
+        .payment-option.selected {
+            border-color: var(--sage-green);
+            background: rgba(156, 175, 136, 0.1);
+        }
+
+        .payment-option i {
+            font-size: 2rem;
+            color: var(--sage-green);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* Contact Section */
         .contact {
             padding: 100px 5%;
             background: var(--deep-forest);
@@ -566,7 +606,7 @@
 
         .contact-item i {
             font-size: 1.5rem;
-            color: #25D366;
+            color: var(--sage-green);
             margin-top: 5px;
         }
 
@@ -593,6 +633,7 @@
             color: var(--cream);
         }
 
+        /* Footer */
         footer {
             background: var(--charcoal);
             color: white;
@@ -649,6 +690,7 @@
             font-size: 0.9rem;
         }
 
+        /* Amharic Text Styles */
         .amharic {
             font-family: 'Noto Sans Ethiopic', sans-serif;
             display: none;
@@ -662,6 +704,7 @@
             display: block;
         }
 
+        /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -684,6 +727,7 @@
             }
         }
 
+        /* Scroll Animation */
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
@@ -695,13 +739,16 @@
             transform: translateY(0);
         }
     </style>
+<base target="_blank">
 </head>
 <body>
+    <!-- Language Toggle -->
     <div class="lang-toggle">
         <button class="lang-btn active" onclick="setLanguage('en')">English</button>
         <button class="lang-btn" onclick="setLanguage('am')">አማርኛ</button>
     </div>
 
+    <!-- Navigation -->
     <nav id="navbar">
         <a href="#" class="logo">
             <div class="butterfly-logo">
@@ -722,6 +769,7 @@
         </ul>
     </nav>
 
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <div class="hero-butterfly">
@@ -736,13 +784,18 @@
             <h1 class="amharic">መንደር ሆሊስቲክ ማዕከል</h1>
             <p class="hero-tagline english">Rooted in Compassion and Science</p>
             <p class="hero-tagline amharic">በርህራሄ እና በሳይንስ የተመሰረተ</p>
+            <p style="color: var(--terracotta); font-size: 1rem; margin-top: 10px; font-family: 'Cormorant Garamond', serif;">
+                
+                <span class="english"></span>
+                <span class="amharic"></span>
+            </p>
             <p class="hero-description english">
                 Personalized meditation instruction, coaching, holistic counseling and behavior modification delivered online or in the comfort of your own home. 
                 Our approach is building step-by-step daily habits towards conscious living that leads to effective stress management, 
                 transformation, inner peace, and harmony.
             </p>
             <p class="hero-description amharic">
-                የግል ጥሞና መረጃ፣ አሰልጣኝ፣ ሆሊስቲክ ምክር እና የባህሪ ማስተካከያ በመስመር ላይ ወይም በራስዎ ቤት ማረፊያ 
+                የግል ጥሞና መረጃ፣ አሰልጣኝ፣ ሆሊስቲክ ምክር እና behavior modification በመስመር ላይ ወይም በራስዎ ቤት ማረፊያ 
                 ለማቅረብ። ዘላቂ ለውጥ፣ ውስጣዊ ሰላም እና ስሜታዊ እኩልነትን ለማግኘት ወደ ንቁ ህይወት 
                 እርምጃ በእርምጃ የዕለት ተዕለት ልማዶችን መገንባት ነው።
             </p>
@@ -755,6 +808,7 @@
         </div>
     </section>
 
+    <!-- Services Section -->
     <section class="services" id="services">
         <div class="section-header">
             <h2 class="english">Our Services</h2>
@@ -762,10 +816,10 @@
             <p class="english">Personalized support for your journey toward wholeness and wellbeing</p>
             <p class="amharic">ወደ ሙሉነት እና ደህንነት የእርስዎ ጉዟ ያለሙያዊ ድጋፍ</p>
         </div>
-        
+
         <div class="services-grid">
             <div class="service-card fade-in">
-                <img src="https://kimi-web-img.moonshot.cn/img/thumbs.dreamstime.com/9afc40e85643f6b2a7efd7c641babb6dd661b372.jpg" alt="Meditation" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px 15px 0 0; margin-bottom: 20px;">
+                <img src="https://i.imgur.com/pTR9qiF.jpeg" alt="Meditation" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px 15px 0 0; margin-bottom: 20px;">
                 <div class="service-icon">
                     <i class="fas fa-spa"></i>
                 </div>
@@ -778,20 +832,20 @@
             </div>
 
             <div class="service-card fade-in">
-                <img src="https://kimi-web-img.moonshot.cn/img/images.squarespace-cdn.com/322f9a7eca655ce1cf3c8b04317250b5ef4b602e.jpg" alt="Holistic Counseling" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px 15px 0 0; margin-bottom: 20px;">
+                <img src="https://kimi-web-img.moonshot.cn/img/t4.ftcdn.net/7782f3a9bf81f1627c6a4ffe959a83e0db6bb8ca.jpg" alt="Holistic Counseling" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px 15px 0 0; margin-bottom: 20px;">
                 <div class="service-icon">
                     <i class="fas fa-hands-holding-heart"></i>
                 </div>
                 <h3 class="english">Holistic Counseling</h3>
                 <h3 class="amharic">ሆሊስቲክ ምክር</h3>
                 <p class="english">An integrative approach addressing body, mind, and spirit. We explore lifestyle, relationships, and personal patterns to support your overall wellbeing.</p>
-                <p class="amharic">ሰውነት፣ ልብ እንፍስ ለማቃናት የተዋሃደ አቀራረብ። የኑሮ ዘይቤን፣ ግንኙነቶችን እና የግል ልማዶችን እንመረምራለን።</p>
+                <p class="amharic">ሰውነት፣ ልብ እ ንፍስ ለማቃናት የተዋሃደ አቀራረብ። የኑሮ ዘይቤን፣ ግንኙነቶችን እና የግል ልማዶችን እንመረምራለን።</p>
                 <span class="service-tag english">Door-to-Door Available</span>
                 <span class="service-tag amharic">ከበር ወደ በር ይገኛል</span>
             </div>
 
             <div class="service-card fade-in">
-                <img src="https://kimi-web-img.moonshot.cn/img/uploads.prod01.oregon.platform-os.com/0b6b14f253ab8fb685d09ed686689ddfecf6676d.jpg" alt="Child Behavior Modification" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px 15px 0 0; margin-bottom: 20px;">
+                <img src="https://kimi-web-img.moonshot.cn/img/images.squarespace-cdn.com/9fd45958dab46e5766213d42da954d2866ecca9a.png" alt="Child Behavior Modification" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px 15px 0 0; margin-bottom: 20px;">
                 <div class="service-icon">
                     <i class="fas fa-child"></i>
                 </div>
@@ -806,7 +860,7 @@
             <div class="service-card fade-in">
                 <img src="https://kimi-web-img.moonshot.cn/img/photos.peopleimages.com/95a28526bff3b70de15c8f167ef32df077ae04c1.jpg" alt="Support for Parents" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px 15px 0 0; margin-bottom: 20px;">
                 <div class="service-icon">
-                    <i class="fas fa-heart"></i>
+                    
                 </div>
                 <h3 class="english">Support for Parents</h3>
                 <h3 class="amharic">ለወላጆች ድጋፍ</h3>
@@ -830,7 +884,7 @@
             </div>
 
             <div class="service-card fade-in">
-                <img src="https://kimi-web-img.moonshot.cn/img/thumbs.dreamstime.com/26176fe2ac99f18e7d76e7a58096341521f218bd.jpg" alt="Talk Cafe" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px 15px 0 0; margin-bottom: 20px;">
+                <img src="https://kimi-web-img.moonshot.cn/img/images.stockcake.com/23702b552d1010a9afc20b694fb6dc45585dcc3e.jpg" alt="Talk Cafe" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px 15px 0 0; margin-bottom: 20px;">
                 <div class="service-icon">
                     <i class="fas fa-mug-hot"></i>
                 </div>
@@ -841,9 +895,12 @@
                 <span class="service-tag english">Virtual & Physical</span>
                 <span class="service-tag amharic">ምናባዊ እና አካላዊ</span>
             </div>
+
+            
         </div>
     </section>
 
+    <!-- About Section -->
     <section class="about" id="about">
         <div class="about-container">
             <h2 class="english">Our Philosophy</h2>
@@ -854,18 +911,20 @@
                 Our approach combines evidence-based practices with deep compassion, creating a nurturing environment 
                 where you can develop new perspectives, healthy habits, and daily routines that support your journey toward wholeness.
                 <br><br>
-                We deeply care about your unique journey. We don't offer ready-made programs that fit all. 
-                Instead, we tailor a unique pathway for you, because every individual is wonderfully unique.
+                Your unique journey matters deeply to us. We believe no single program fits all—instead, we thoughtfully craft personalized pathways, honoring the wonderful individuality of each person.
             </p>
             <p class="about-text amharic">
                 በመንደር፣ እያንዳንዱ ሰው እንዲያድግ እና እንዲያብብ ያለውን ተፈጥሯዊ አቅም እናምናለን። 
                 እኛ የቴኒካዊ ህክምና ማዕከል አይደለንም—የራስን ለማወቅ እና የግል ዕድገት መጠጊያ ነን። 
                 የምንሰጠው አገልግሎት በሳይንስ የተረጋገጠ ልምምድን ከጥልቅ ርህራሄ ጋር ያጣምራል።
                 <br><br>
-                ስለእርስዎ ልዩ ጉዞ በጣም እንከባከባለን። ለሁሉም የሚስማሙ ቀደም ሲል የተዘጋጁ ፕሮግራሞችን አናቀርብም። 
-                ይልቁንስ ልዩ መንገድ እንሰራለን፣ ምክንያቱም እያንዳንዱ ሰው በጣም ልዩ ነው።
+                የእርስዎ ልዩ ጉዞ ለእኛ በጣም ያሳስበናል። ለሁሉም የሚስማሙ ፕሮግራሞች እንደሌሉ እናምናለን—ይልቁንም ለእያንዳንዱ ሰው የተለየ መንገድ በጥንቃቄ እንሰራለን፣ የእያንዳንዱን ሰው አስደናቂ ልዩነት በክብር እንቀበላለን።
             </p>
+
             
+
+            
+
             <div class="values">
                 <div class="value-item">
                     <div class="value-icon">
@@ -899,6 +958,7 @@
         </div>
     </section>
 
+    <!-- How It Works -->
     <section class="how-it-works">
         <div class="section-header">
             <h2 class="english">How It Works</h2>
@@ -906,7 +966,7 @@
             <p class="english">Simple steps to begin your wellness journey</p>
             <p class="amharic">የጤና ጉዞዎን ለመጀመር ቀላል ደረጃዎች</p>
         </div>
-        
+
         <div class="steps">
             <div class="step fade-in">
                 <div class="step-number">1</div>
@@ -932,6 +992,7 @@
         </div>
     </section>
 
+    <!-- Booking Section -->
     <section class="booking" id="booking">
         <div class="booking-container">
             <div class="section-header">
@@ -1011,6 +1072,8 @@
                     <textarea rows="4" placeholder="Tell us about your goals..."></textarea>
                 </div>
 
+                
+
                 <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 30px;">
                     <span class="english">Confirm Booking</span>
                     <span class="amharic">አስያይ ያረጋግጡ</span>
@@ -1019,12 +1082,13 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="contact-container">
             <div class="contact-info">
                 <h2 class="english">Get in Touch</h2>
                 <h2 class="amharic">አግኙን</h2>
-                
+
                 <div class="contact-item">
                     <i class="fab fa-whatsapp" style="color: #25D366;"></i>
                     <div>
@@ -1078,6 +1142,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="footer-logo">
             <svg viewBox="0 0 100 100">
@@ -1085,11 +1150,11 @@
             </svg>
             <span>Mender Holistic Center</span>
         </div>
-        
+
         <div class="social-links">
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://wa.me/971508505701"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
             <a href="#"><i class="fab fa-telegram-plane"></i></a>
         </div>
 
@@ -1101,6 +1166,7 @@
     </footer>
 
     <script>
+        // Language Toggle
         function setLanguage(lang) {
             document.body.classList.toggle('amharic-mode', lang === 'am');
             document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -1109,10 +1175,12 @@
             event.target.classList.add('active');
         }
 
+        // Form validation
         function validateForm(form) {
             return form.checkValidity();
         }
 
+        // Scroll Animation
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1128,6 +1196,7 @@
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
+        // Navbar Scroll Effect
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 50) {
@@ -1137,11 +1206,13 @@
             }
         });
 
+        // Form Submission
         document.getElementById('bookingForm').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Thank you for your booking! We will contact you shortly to confirm your session.\n\nአስያይዎ እናመሰግናለን! ስብሰባዎን ለማረጋገጥ በቅርቡ እናገኝዎታለን።');
         });
 
+        // Smooth Scroll for Navigation Links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
